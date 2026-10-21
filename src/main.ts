@@ -64,6 +64,7 @@ mouth.setAttribute("stroke-width", "4");
 mouth.setAttribute("stroke-linecap", "round");
 face.append(mouth);
 
+//File name: left-ear.png, Url: https://pngtree.com/freepng/ear-organ-free-illustration_4492546.html, Artist: 588ku  Free License
 const leftEarImage = document.createElementNS(
   "http://www.w3.org/2000/svg",
   "image",
@@ -75,6 +76,7 @@ leftEarImage.setAttribute("width", "80");
 leftEarImage.setAttribute("height", "80");
 face.append(leftEarImage);
 
+//File name: right-ear.png, Url: https://pngtree.com/freepng/ear-organ-free-illustration_4492546.html, Artist: 588ku  Free License
 const rightEarImage = document.createElementNS(
   "http://www.w3.org/2000/svg",
   "image",
