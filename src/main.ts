@@ -1,6 +1,11 @@
 const portrait = document.querySelector<HTMLDivElement>("#portrait")!;
 const spin = document.querySelector<HTMLButtonElement>("#spin")!;
 
+// @deno-types="./asset-url.d.ts"
+import leftEarUrl from "./assets/left-ear.png?no-inline";
+// @deno-types="./asset-url.d.ts"
+import rightEarUrl from "./assets/right-ear.png?no-inline";
+
 // The prototype grew inline. Keep it this way until the refactoring checkpoint.
 const face = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 face.setAttribute("viewBox", "0 0 200 200");
@@ -58,6 +63,28 @@ mouth.setAttribute("stroke", "#302c29");
 mouth.setAttribute("stroke-width", "4");
 mouth.setAttribute("stroke-linecap", "round");
 face.append(mouth);
+
+const leftEarImage = document.createElementNS(
+  "http://www.w3.org/2000/svg",
+  "image",
+);
+leftEarImage.setAttribute("href", leftEarUrl);
+leftEarImage.setAttribute("x", "140");
+leftEarImage.setAttribute("y", "57");
+leftEarImage.setAttribute("width", "80");
+leftEarImage.setAttribute("height", "80");
+face.append(leftEarImage);
+
+const rightEarImage = document.createElementNS(
+  "http://www.w3.org/2000/svg",
+  "image",
+);
+rightEarImage.setAttribute("href", rightEarUrl);
+rightEarImage.setAttribute("x", "-20");
+rightEarImage.setAttribute("y", "57");
+rightEarImage.setAttribute("width", "80");
+rightEarImage.setAttribute("height", "80");
+face.append(rightEarImage);
 
 portrait.append(face);
 
